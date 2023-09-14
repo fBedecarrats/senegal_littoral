@@ -8,7 +8,7 @@ REPO_URL=https://${GIT_PERSONAL_ACCESS_TOKEN}@github.com/fBedecarrats/senegal_li
 git clone $REPO_URL $WORK_DIR
 
 # copy heavy data sources
-mc cp -r s3/fbedecarrats/mapme_biodiversity/chirps $WORK_DIR/data
+mc cp -r s3/fbedecarrats/diffusion/mapme_biodiversity/chirps $WORK_DIR/data
 
 # Grant permission for the created folders/files
 chown -R ${USERNAME}:${GROUPNAME} $WORK_DIR
