@@ -36,13 +36,11 @@ aoi <- aoi %>%
   get_resources("chirps")
 
 # Compute precipitation indicators
-with_progress({ # to have a progress bar 
-  aoi <- aoi %>%
-    calc_indicators("precipitation_chirps",
-                    engine = "exactextract",
-                    scales_spi = 3,
-                    spi_prev_years = 8)
-}) # progress bar does not seem to work
+aoi <- aoi %>%
+  calc_indicators("precipitation_chirps",
+                  engine = "exactextract",
+                  scales_spi = 3,
+                  spi_prev_years = 8)
 
 # We compute 3 days average precipitations
 precip_3d <- aoi %>%
