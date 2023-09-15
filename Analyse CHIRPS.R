@@ -10,11 +10,6 @@ library(geodata) # to get municipalities
 library(sf) # to handle spatial data (vectors)
 library(terra) # to handle patial data (rasters)
 library(mapme.biodiversity) # to compute spatial indicators
-detach("package:mapme.biodiversity", unload = TRUE)
-remove.packages("mapme.biodiversity")
-install.packages("mapme.biodiversity")
-library(mapme.biodiversity)
-
 library(tmap) # nice maps
 library(zoo) # time series
 library(units) # ensures units are right
